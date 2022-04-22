@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s linear;
+}
+:root{
+    /* glvane */
+    --LimeGreen: hsl(163, 72%, 41%);
+    --BrightRed: hsl(356, 69%, 56%);
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear-gradient(#fdc468,#df4996);
+    --YouTube: hsl(348, 97%, 39%);
+    /* svj */
+    --ToggleS: hsl(230, 22%, 74%);
+    /* tamna */
+    --ToggleT: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    /* tamna2 */
+   --VeryDarkBlue: hsl(230, 17%, 14%);
+    --VeryDarkBlue: hsl(232, 19%, 15%);
+    --DarkDesaturatedBlue: hsl(228, 28%, 20%);
+    --DesaturatedBlue: hsl(228, 34%, 66%);
+    --White: hsl(0, 0%, 100%);
+    /* svj2 */
+    --White: hsl(0, 0%, 100%);
+--VeryPaleBlue: hsl(225, 100%, 98%);
+--LightGrayishBlue: hsl(227, 47%, 96%);
+--DarkGrayishBlue: hsl(228, 12%, 44%);
+--VeryDarkBlue: hsl(230, 17%, 14%);
+}
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background 0.5s linear;
+}
+p{
+    font-size: 14px;
+}
+div{
+    transition: background 0.5s linear;
+}
+header{
+    background-color: var(--VeryPaleBlue);
+    width: 100vw;
+    transition: background 0s;
+    
+}
+.header-div1{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-bottom: 200px;
+    transition: background 0s;
+}
+.header-div2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+.toogle{
+    display: flex; 
+    grid-column: 2/3;
+    grid-row: 1/3;
+    text-align: right;
+    align-items: center;
+    justify-content: right;
+}
+header h1{
+    color: var(--VeryDarkBlue);
+}
+.toogle p{
+    color: var(--DarkGrayishBlue);
+    position: relative;
+    right: 30px;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+    background: var(--ToggleT);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 19px;
+    width: 44px;
+    transform: scale(1.5);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 15px;
+    width: 15px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+section{
+    position: relative;
+    top: -150px;
+    max-width: 1500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.followers{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 45px;
+}
+.followers div{
+    background-color: var(--LightGrayishBlue);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--DarkGrayishBlue);
+}
+.followers h2{
+    font-weight: 700;
+    font-size:56px;
+    color: black;
+}
+
+.followers h4{
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: var(--DarkGrayishBlue);
+}
+.nathanf{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 35px;
+}
+.nathanf div{
+    position: relative;
+    top: -5px;
+}
+.zeleno{
+    color: var(--LimeGreen);
+}
+.followers > :nth-child(1){
+    border-top: 10px solid var(--Facebook);
+}
+
+.followers > :nth-child(2){
+    border-top: 10px solid var(--Twitter);
+}
+
+.followers > :nth-child(3){
+    border-top: 10px solid #fdc468;
+}
+
+.followers > :nth-child(4){
+    border-top: 10px solid var(--YouTube);
+}
+section>h2{
+    font-size:30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.overview{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 45px;
+}
+.pageViews{
+    display: flex;
+    gap: 45px;
+    background-color: var(--LightGrayishBlue);
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+.pageViews-div1{
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.pageViews-div2{
+    display: grid;
+    flex-direction: column;
+    gap: 45px;
+    position: relative;
+    left: 110px;
+}
+.divPomocni1{
+    display: flex;
+    font-size: 14px;
+}
+.divPomocni1 img{
+    position: relative;
+    top: -3px;
+}
+.pageViews-div1{
+    font-size: 30px;
+}
+
+.pageViews-div1 p {
+    color: var(--DarkGrayishBlue);
+    font-weight: 700;
+}
+.crveno{
+    color: var(--BrightRed);
+}
+.pageViews-div2>img{
+    position: relative;
+    left: 25px;
+}
+.section-divs:hover >*{
+    background-color: hsl(227, 19%, 91%)!important;
+}
+.section-divs:hover >*{
+    border-radius: 0;
+}
+.pageViews:hover{
+    background-color: hsl(227, 19%, 91%);
+}
+body.dark{
+    background-color: hsl(230, 17%, 14%);
+}
+body.dark header{
+    background-color: hsl(232, 19%, 15%);
+}
+body.dark .header-div1{
+    background-color: hsl(232, 19%, 15%);
+}
+body.dark h1{
+    color: white;
+}
+body.dark .overview-today{
+    color: white;
+}
+body.dark header p{
+    color: hsl(228, 34%, 66%);
+}
+
+body.dark .followers div{
+    background-color: var(--DarkDesaturatedBlue);
+}
+body.dark .section-divs h2{
+    color: white;
+}
+
+body.dark .section-divs h4{
+    color: hsl(228, 34%, 66%);
+}
+body.dark .nathanf{
+    color: hsl(228, 34%, 66%);
+}
+body.dark .pageViews{
+    background-color: var(--DarkDesaturatedBlue);
+}
+body.dark .pageViews p{
+    color:  hsl(228, 34%, 66%);
+}
+body.dark .pageViews h3{
+    color:  white;
+}
+body.dark .section-divs:hover >*{
+    background-color: hsl(229, 24%, 23%)!important;
+}
+body.dark .section-divs:hover >*{
+    border-radius: 0;
+}
+body.dark .pageViews:hover{
+    background-color: hsl(229, 24%, 23%);
+}
+
+@media screen and (max-width: 425px) {
+    .header-div2{
+        max-width: 300px;
+    }
+    .header-div1{
+        max-width: 300px;
+    }
+    section{
+
+        max-width: 300px;
+    }
+    .followers{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 45px;
+    }
+    .overview{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 45px;
+    }
+    .pageViews-div2{
+        display: grid;
+        flex-direction: column;
+        gap: 45px;
+        position: relative;
+        left: 50px;
+    }
+}
